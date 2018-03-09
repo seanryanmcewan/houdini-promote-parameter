@@ -56,15 +56,9 @@ if parent_node.path() not in top_level:
         newParm = parm.parmTemplate()
         new_parm_name = "%s_%s" % (node.name(), newParm.name())
         newParm.setName(new_parm_name)
-        
-        print new_parm_name
-        
-        print allParentParmNames
 
         # IF NEW PARM TEMPLATE NOT ALREADY ON PARENT NODE
         if new_parm_name not in allParentParmNames:
-            
-            print "ADDING"
             
             # ADD NEW PARM TEMPLATE TO PARENT NODE
             parmGroup.addParmTemplate(newParm)
