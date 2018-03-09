@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menuDocument>
+    <menu>
+        <separatorItem></separatorItem>
+        <scriptItem id="promote_parameter_to_parent_node">
+            <label>Promote Parameter to Parent Node</label>
+            <scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/promote_parameter_to_parent_node.py</scriptPath>
+        </scriptItem>
+        <scriptItem id="promote_parameter_to_parent_node_as">
+            <label>Promote Parameter to Parent Node As</label>
+            <scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/promote_parameter_to_parent_node_as.py</scriptPath>
+        </scriptItem>
+    </menu>
+</menuDocument>
+
+
