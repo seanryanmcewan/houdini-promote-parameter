@@ -80,8 +80,8 @@ if parent_node.path() not in top_level:
                 parent_parm.setExpression(parm_eval)
                 parm.deleteAllKeyframes()
                 
-                # LINK TO PARENT PARM
-                parm.set(parent_parm)
+            # LINK TO PARENT PARM
+            parm.set(parent_parm)
                 
     # IF PARM HAS MULTIPLE FIELDS
     else:
@@ -152,6 +152,6 @@ if parent_node.path() not in top_level:
                     parent_child_parm.setExpression(parm_eval)
                     child_parm.deleteAllKeyframes()
                     
-                # LINK TO PARENT PARM
-                child_parm.set(parent_child_parm)
+            # LINK TO PARENT PARM
+            child_parm.set(parent_child_parm)
 
