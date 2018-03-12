@@ -54,7 +54,7 @@ if parent_node.path() not in top_level:
         
         # CREATE NEW PARM TEMPLATE
         newParm = parm.parmTemplate()
-        new_parm_name = "%s_%s" % (node.name(), newParm.name())
+        new_parm_name = "{0}_{1}".format(node.name(), newParm.name())
         newParm.setName(new_parm_name)
 
         # IF NEW PARM TEMPLATE NOT ALREADY ON PARENT NODE
@@ -89,7 +89,7 @@ if parent_node.path() not in top_level:
             
         # CREATE NEW PARM TEMPLATE       
         newParm = parms[0].parmTemplate()
-        new_parm_name = "%s_%s" % (node.name(), newParm.name())
+        new_parm_name = "{0}_{1}".format(node.name(), newParm.name())
         newParm.setName(new_parm_name)
         
         # IF NEW PARM TEMPLATE NOT ALREADY ON PARENT NODE            
@@ -142,4 +142,3 @@ if parent_node.path() not in top_level:
                     
             # LINK TO PARENT PARM
             child_parm.set(parent_child_parm)
-
