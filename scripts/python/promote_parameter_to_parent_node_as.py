@@ -53,7 +53,7 @@ if parent_node.path() not in top_level:
         
         # CREATE NEW PARM TEMPLATE
         newParm = parm.parmTemplate()
-        new_parm_name = "%s_%s" % (node.name(), newParm.name())
+        new_parm_name = "{0}_{1}".format(node.name(), newParm.name())
         newParm.setName(new_parm_name)
         new_parm_label = ''
         
@@ -95,7 +95,7 @@ if parent_node.path() not in top_level:
             
         # CREATE NEW PARM TEMPLATE       
         newParm = parms[0].parmTemplate()
-        new_parm_name = "%s_%s" % (node.name(), newParm.name())
+        new_parm_name = "{0}_{1}" % (node.name(), newParm.name())
         newParm.setName(new_parm_name)
         
         # QUERY USER FOR NEW PARM LABEL
