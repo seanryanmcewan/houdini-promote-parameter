@@ -19,8 +19,6 @@ if parent_node.path() not in top_level:
         # GET PARAMETER DETAILS
         set_expr = False
         parm = parms[0]
-        parm_label = parm.parmTemplate().label()
-        parm_name = parm.name()
 
         # IF PARM IS STRING
         if type(parm.parmTemplate()) is hou.StringParmTemplate:  
