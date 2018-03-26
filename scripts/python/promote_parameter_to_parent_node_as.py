@@ -19,7 +19,6 @@ if parent_node.path() not in top_level:
         # GET PARAMETER DETAILS
         set_expr = False
         parm = parms[0]
-        parm_template = parm.parmTemplate()
         parm_label = parm.parmTemplate().label()
         parm_name = parm.name()
 
