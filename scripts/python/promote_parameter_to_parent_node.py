@@ -20,7 +20,7 @@ if parent_node.path() not in top_level:
         # GET PARAMETER DETAILS
         set_expr = False
         parm = parms[0]
-        parmTmp = parm.parmTemplate()
+        parm_template = parm.parmTemplate()
         parm_label = parm.parmTemplate().label()
         parm_name = parm.name()
 
@@ -46,23 +46,23 @@ if parent_node.path() not in top_level:
             parm_eval = parm.eval()
         
         # GET EXISTING PARM TEMPLATES
-        parmGroup = parent_node.parmTemplateGroup()
-        parentParmTemplates = parmGroup.parmTemplates()
-        allParentParmNames = []
-        for parent_parm_name in parentParmTemplates:
-            allParentParmNames.append(parent_parm_name.name())
+        parm_group = parent_node.parmTemplateGroup()
+        parent_parm_templates = parm_group.parmTemplates()
+        all_parent_parm_names = []
+        for parent_parm_name in parent_parm_templates:
+            all_parent_parm_names.append(parent_parm_name.name())
         
         # CREATE NEW PARM TEMPLATE
-        newParm = parm.parmTemplate()
-        new_parm_name = "{0}_{1}".format(node.name(), newParm.name())
-        newParm.setName(new_parm_name)
+        new_parm = parm.parmTemplate()
+        new_parm_name = "{0}_{1}".format(node.name(), new_parm.name())
+        new_parm.setName(new_parm_name)
 
         # IF NEW PARM TEMPLATE NOT ALREADY ON PARENT NODE
-        if new_parm_name not in allParentParmNames:
+        if new_parm_name not in all_parent_parm_names:
             
             # ADD NEW PARM TEMPLATE TO PARENT NODE
-            parmGroup.addParmTemplate(newParm)
-            parent_node.setParmTemplateGroup(parmGroup)
+            parm_group.addParmTemplate(new_parm)
+            parent_node.setParmTemplateGroup(parm_group)
             parent_parm = parent_node.parm(new_parm_name)
             
             # SET VALUE DIRECTLY
@@ -81,24 +81,24 @@ if parent_node.path() not in top_level:
     else:
         
         # GET EXISTING PARM TEMPLATES        
-        parmGroup = parent_node.parmTemplateGroup()
-        parentParmTemplates = parmGroup.parmTemplates()
-        allParentParmNames = []
-        for parent_parm_name in parentParmTemplates:
-            allParentParmNames.append(parent_parm_name.name())
+        parm_group = parent_node.parmTemplateGroup()
+        parent_parm_templates = parm_group.parmTemplates()
+        all_parent_parm_names = []
+        for parent_parm_name in parent_parm_templates:
+            all_parent_parm_names.append(parent_parm_name.name())
             
         # CREATE NEW PARM TEMPLATE       
-        newParm = parms[0].parmTemplate()
-        new_parm_name = "{0}_{1}".format(node.name(), newParm.name())
-        newParm.setName(new_parm_name)
+        new_parm = parms[0].parmTemplate()
+        new_parm_name = "{0}_{1}".format(node.name(), new_parm.name())
+        new_parm.setName(new_parm_name)
         
         # IF NEW PARM TEMPLATE NOT ALREADY ON PARENT NODE            
-        if new_parm_name not in allParentParmNames:
+        if new_parm_name not in all_parent_parm_names:
             
             # ADD NEW PARM TEMPLATE TO PARENT NODE    
-            parmGroup.addParmTemplate(newParm)
-            parent_node.setParmTemplateGroup(parmGroup)
-            parm_name = newParm.name()
+            parm_group.addParmTemplate(new_parm)
+            parent_node.setParmTemplateGroup(parm_group)
+            parm_name = new_parm.name()
             parent_parm = parent_node.parmTuple(new_parm_name)                
 
             # HANDLE EACH FIELD OF SOURCE PARAMETER
